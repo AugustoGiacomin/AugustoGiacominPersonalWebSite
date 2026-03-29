@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AugustoGiacomin — Nutricionista</title>
+  <meta name="description" content="Nutricionista com especialização em tecnologia de alimentos. Atendimento P&D para Produtos e Alimentação Criativa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <span class="topbar-handle">✦ AugustoGiacomin ✦</span>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <span class="deco deco-star deco-star--tl">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 0L15.96 12.04L28 14L15.96 15.96L14 28L12.04 15.96L0 14L12.04 12.04L14 0Z" fill="#1A1A1A"/></svg>
+    </span>
+    <span class="deco deco-star deco-star--tr">
+      <svg width="22" height="22" viewBox="0 0 28 28" fill="none"><path d="M14 0L15.96 12.04L28 14L15.96 15.96L14 28L12.04 15.96L0 14L12.04 12.04L14 0Z" fill="#1A1A1A"/></svg>
+    </span>
+    <span class="deco deco-star deco-star--br">
+      <svg width="18" height="18" viewBox="0 0 28 28" fill="none"><path d="M14 0L15.96 12.04L28 14L15.96 15.96L14 28L12.04 15.96L0 14L12.04 12.04L14 0Z" fill="#1A1A1A"/></svg>
+    </span>
+
+    <div class="deco deco-oval">
+      <svg width="80" height="50" viewBox="0 0 80 50" fill="none">
+        <ellipse cx="40" cy="25" rx="38" ry="23" stroke="#1A1A1A" stroke-width="2"/>
+        <path d="M40 6L41.96 23.04L59 25L41.96 26.96L40 44L38.04 26.96L21 25L38.04 23.04L40 6Z" fill="#1A1A1A"/>
+      </svg>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-avatar-wrap">
+        <img
+          class="hero-avatar"
+          src="foto.jpg"
+          alt="Foto AugustoGiacomin"
+        />
+      </div>
+      <h1 class="hero-title">AugustoGiacomin</h1>
+      <div class="hero-sticker">NUTRICIONISTA</div>
+      <p class="hero-subtitle">Criatividade que alimenta negócios e pessoas.</p>
+    </div>
+
+    <!-- Wireframe heart 3D (Three.js) -->
+    <div class="wireframe-wrap" aria-hidden="true"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="sobre">
+    <div class="section-tag">✦ SOBRE ✦</div>
+    <div class="about-content">
+      <p class="about-lead">Nutricionista com especialização em tecnologia de alimentos por formação, criativo por essência.</p>
+      <p class="about-sub">Para estabelecimentos, desenvolvo produtos e cardápios com ingredientes tecnológicos pensados em estética, durabilidade e custo-benefício. Para pessoas, crio estratégias alimentares que fazem a dieta funcionar na prática, com criatividade suficiente para virar hábito.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="servicos">
+    <h2 class="section-title">SERVIÇOS</h2>
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-badge">1</div>
+        <div class="card-body">
+          <h3 class="card-title">P&amp;D PARA PRODUTOS</h3>
+          <p class="card-desc">Pesquisa e desenvolvimento de produtos alimentícios com ingredientes tecnológicos: visualmente atrativos, maior shelf-life e custo-benefício ideal. Também criação de cardápios para estabelecimentos.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-badge">2</div>
+        <div class="card-body">
+          <h3 class="card-title">ALIMENTAÇÃO CRIATIVA</h3>
+          <p class="card-desc">Planos alimentares criativos e individualizados para que a dieta encaixe na rotina de cada pessoa e vire hábito de verdade.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contato">
+    <div class="contact-inner">
+      <h2 class="contact-title">VAMOS FALAR?</h2>
+      <div class="contact-text">
+        <p>Ficou com alguma dúvida?</p>
+        <p>Manda uma mensagem e a gente faz acontecer.</p>
+      </div>
+      <div class="contact-buttons">
+        <a class="btn-whatsapp" href="https://wa.me/5519993237088" target="_blank" rel="noopener noreferrer">
+          ✦ &nbsp;FALAR NO WHATSAPP&nbsp; ✦
+        </a>
+        <a class="btn-instagram" href="https://instagram.com/agiacomin" target="_blank" rel="noopener noreferrer">
+          ✦ &nbsp;@AGIACOMIN NO INSTAGRAM&nbsp; ✦
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span>✦ AugustoGiacomin ✦</span>
+  </footer>
+
+  <!-- Three.js wireframe Saturn -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script>
+  (function () {
+    const wrap = document.querySelector('.wireframe-wrap');
+    if (!wrap || typeof THREE === 'undefined') return;
+
+    // Square canvas — sphere fits perfectly
+    const W = wrap.offsetWidth;
+    wrap.style.height = W + 'px';
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(W, W);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    wrap.appendChild(renderer.domElement);
+
+    const scene  = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
+    camera.position.z = 3.2;
+
+    const mat   = new THREE.LineBasicMaterial({ color: 0x1a1a1a });
+    const globe = new THREE.Group();
+    globe.rotation.x = 0.18; // very slight tilt like the reference
+    scene.add(globe);
+
+    // Dense lat/lon sphere — matches reference image grid
+    (function buildSphere(r, lats, lons) {
+      const pts = [];
+      // latitude rings
+      for (let i = 1; i < lats; i++) {
+        const phi = (i / lats) * Math.PI;
+        const y = r * Math.cos(phi), rr = r * Math.sin(phi);
+        for (let j = 0; j < lons; j++) {
+          const a1 = (j / lons) * Math.PI * 2, a2 = ((j + 1) / lons) * Math.PI * 2;
+          pts.push(rr * Math.cos(a1), y, rr * Math.sin(a1),
+                   rr * Math.cos(a2), y, rr * Math.sin(a2));
+        }
+      }
+      // longitude meridians
+      for (let j = 0; j < lons; j++) {
+        const th = (j / lons) * Math.PI * 2;
+        for (let i = 0; i < lats; i++) {
+          const p1 = (i / lats) * Math.PI, p2 = ((i + 1) / lats) * Math.PI;
+          pts.push(r * Math.sin(p1) * Math.cos(th), r * Math.cos(p1), r * Math.sin(p1) * Math.sin(th),
+                   r * Math.sin(p2) * Math.cos(th), r * Math.cos(p2), r * Math.sin(p2) * Math.sin(th));
+        }
+      }
+      const g = new THREE.BufferGeometry();
+      g.setAttribute('position', new THREE.Float32BufferAttribute(pts, 3));
+      globe.add(new THREE.LineSegments(g, mat));
+    }(1.0, 20, 26));
+
+    // Slow planet rotation
+    (function loop() {
+      requestAnimationFrame(loop);
+      globe.rotation.y += 0.003;
+      renderer.render(scene, camera);
+    })();
+
+    window.addEventListener('resize', function () {
+      const nW = wrap.offsetWidth;
+      wrap.style.height = nW + 'px';
+      renderer.setSize(nW, nW);
+      camera.updateProjectionMatrix();
+    });
+  })();
+  </script>
+
+</body>
+</html>
