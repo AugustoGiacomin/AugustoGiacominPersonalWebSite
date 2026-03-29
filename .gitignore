@@ -1,0 +1,4 @@
+node_modules/
+remove-bg.mjs
+*.png
+.DS_Store
