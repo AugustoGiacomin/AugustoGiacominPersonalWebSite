@@ -1,0 +1,461 @@
+/* =========================================
+   AGIACOMIN — Design System
+   Estilo: Editorial Y2K / Brutalist
+   ========================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:        #EDEAE3;
+  --ink:       #1A1A1A;
+  --grid-line: rgba(0, 0, 0, 0.10);
+  --font-head: 'Bebas Neue', sans-serif;
+  --font-body: 'Space Mono', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  background-image:
+    repeating-linear-gradient(var(--grid-line) 0 1px, transparent 1px 100%),
+    repeating-linear-gradient(90deg, var(--grid-line) 0 1px, transparent 1px 100%);
+  background-size: 40px 40px;
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- TOP BAR ---- */
+.topbar {
+  background: var(--ink);
+  color: var(--bg);
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.topbar-handle {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+}
+
+/* ---- HERO ---- */
+.hero {
+  position: relative;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px 60px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-avatar-wrap {
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  border: 3px solid var(--ink);
+  overflow: hidden;
+}
+
+.hero-avatar {
+  width: clamp(100px, 16vw, 200px);
+  height: clamp(100px, 16vw, 200px);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: clamp(32px, 9vw, 160px);
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+  user-select: none;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
+}
+
+.hero-subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(13px, 2vw, 20px);
+  font-style: italic;
+  color: var(--ink);
+  margin: 260px 0 12px;
+  letter-spacing: 0.02em;
+}
+
+.hero-sticker {
+  display: inline-block;
+  background: var(--ink);
+  color: var(--bg);
+  font-family: var(--font-body);
+  font-size: clamp(11px, 1.8vw, 16px);
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  padding: 8px 20px;
+  transform: rotate(-3deg);
+  margin-top: 18px;
+  border-radius: 4px;
+}
+
+/* Decorative stars */
+.deco { position: absolute; pointer-events: none; }
+
+.deco-star--tl { top: 18%;  left:  8%; }
+.deco-star--tr { top: 14%;  right: 10%; }
+.deco-star--br { bottom: 22%; right: 14%; }
+
+.deco-oval {
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Wireframe 3D decoration — background sphere */
+.wireframe-wrap {
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(220px, 48vw, 420px);
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.wireframe-svg {
+  width: 100%;
+  height: auto;
+}
+
+/* ---- ABOUT ---- */
+.about {
+  padding: 80px 24px 80px;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-tag {
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  font-weight: 700;
+  margin-bottom: 32px;
+  opacity: 0.6;
+}
+
+.about-lead {
+  font-size: clamp(13px, 1.5vw, 15px);
+  line-height: 1.9;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-family: var(--font-head);
+  font-size: clamp(22px, 3.2vw, 32px);
+  line-height: 1.2;
+  margin-bottom: 20px;
+  letter-spacing: 0.01em;
+}
+
+.about-sub {
+  font-size: clamp(13px, 1.5vw, 15px);
+  line-height: 1.9;
+  opacity: 0.75;
+}
+
+/* ---- SERVICES ---- */
+.services {
+  padding: 60px 24px 80px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: var(--font-head);
+  font-size: clamp(48px, 9vw, 96px);
+  letter-spacing: 0.01em;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  border: 2px solid var(--ink);
+  border-radius: 18px;
+  padding: 28px 24px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  background: transparent;
+  transition: background 0.2s;
+}
+
+.card:hover {
+  background: rgba(0,0,0,0.04);
+}
+
+.card-badge {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  background: var(--ink);
+  color: var(--bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.card-title {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.card-desc {
+  font-size: 12px;
+  line-height: 1.8;
+  opacity: 0.7;
+}
+
+/* ---- CONTACT ---- */
+.contact {
+  padding: 80px 24px 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.contact-inner {
+  text-align: center;
+  max-width: 640px;
+  width: 100%;
+}
+
+.contact-title {
+  font-family: var(--font-head);
+  font-size: clamp(52px, 10vw, 108px);
+  letter-spacing: 0.01em;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+.contact-text {
+  margin-bottom: 36px;
+}
+
+.contact-text p {
+  font-size: clamp(12px, 1.6vw, 14px);
+  line-height: 1.9;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  background: var(--ink);
+  color: var(--bg);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  padding: 16px 36px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.btn-whatsapp:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+.btn-instagram {
+  display: inline-block;
+  background: transparent;
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  padding: 14px 36px;
+  border-radius: 999px;
+  text-decoration: none;
+  margin-top: 14px;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.btn-instagram:hover {
+  background: var(--ink);
+  color: var(--bg);
+  transform: translateY(-2px);
+}
+
+/* ---- FOOTER ---- */
+.footer {
+  background: var(--ink);
+  color: var(--bg);
+  text-align: center;
+  padding: 18px;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  font-family: var(--font-body);
+  font-weight: 700;
+}
+
+/* ---- STAR TWINKLE ANIMATIONS ---- */
+@keyframes twinkle {
+  0%, 100% { opacity: 1;    transform: scale(1)    rotate(0deg);  }
+  50%       { opacity: 0.15; transform: scale(0.5)  rotate(22deg); }
+}
+
+.deco-star--tl { animation: twinkle 3.4s ease-in-out infinite; }
+.deco-star--tr { animation: twinkle 2.8s ease-in-out infinite 1.3s; }
+.deco-star--br { animation: twinkle 4.1s ease-in-out infinite 0.7s; }
+
+/* Three.js canvas block fix */
+.wireframe-wrap canvas { display: block; }
+
+/* ---- RESPONSIVE — tablet (≤ 768px) ---- */
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 48px 24px 48px;
+  }
+
+  .wireframe-wrap {
+    width: clamp(200px, 55vw, 340px);
+    opacity: 0.4;
+  }
+
+  .about {
+    padding: 20px 32px 60px;
+  }
+
+  .services {
+    padding: 48px 32px 60px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .contact {
+    padding: 60px 32px;
+  }
+
+  .contact-inner {
+    text-align: center;
+  }
+
+  .btn-whatsapp,
+  .btn-instagram {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ---- RESPONSIVE — mobile (≤ 480px) ---- */
+@media (max-width: 480px) {
+  .topbar-handle {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+  }
+
+  .hero {
+    padding: 40px 20px 40px;
+  }
+
+  .hero-sticker {
+    font-size: 11px;
+    padding: 6px 16px;
+  }
+
+  .deco-star--tl,
+  .deco-star--tr,
+  .deco-star--br,
+  .deco-oval {
+    display: none;
+  }
+
+  .wireframe-wrap {
+    width: 60vw;
+    opacity: 0.32;
+  }
+
+  .about {
+    padding: 20px 20px 48px;
+  }
+
+  .about-sub {
+    font-size: 12px;
+  }
+
+  .section-title {
+    font-size: clamp(40px, 11vw, 72px);
+  }
+
+  .card {
+    padding: 20px 18px;
+  }
+
+  .contact-title {
+    font-size: clamp(44px, 13vw, 80px);
+  }
+
+  .contact {
+    padding: 48px 20px 60px;
+  }
+
+  .btn-whatsapp,
+  .btn-instagram {
+    font-size: 11px;
+    padding: 14px 20px;
+    letter-spacing: 0.15em;
+  }
+}
